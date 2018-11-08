@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<withContext(CoreAdmin)
+  appLayout={[Function]}
+  catchAll={[Function]}
+  dataProvider={[Function]}
+  loading={[Function]}
+  loginPage={[Function]}
+  logoutButton={[Function]}
+>
+  <Connect(Resource)
+    list={[Function]}
+    name="users"
+  />
+</withContext(CoreAdmin)>
+`;

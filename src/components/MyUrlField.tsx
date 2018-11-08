@@ -1,6 +1,6 @@
-import React from "react"
-import { withStyles, WithStyles } from "@material-ui/core/styles"
+import React, { SFC } from "react"
 import LaunchIcon from "@material-ui/icons/Launch"
+import { withStyles, WithStyles } from "@material-ui/core/styles"
 
 const styles = {
   link: {
@@ -11,12 +11,12 @@ const styles = {
     paddingLeft: 2,
   },
 }
-interface Props extends WithStyles<typeof styles> {
+type Props = WithStyles<typeof styles> & {
   record: any
   source: string
 }
 
-const MyUrlField: React.SFC<Props> = ({ record = {}, source, classes }) => (
+const MyUrlField: SFC<Props> = ({ record = {}, source, classes }) => (
   <a href={record[source]} className={classes.link}>
     {record[source]}
     <LaunchIcon className={classes.icon} />

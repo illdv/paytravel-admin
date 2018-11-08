@@ -1,7 +1,7 @@
-import React from "react"
+import React, { SFC } from "react"
 import { List, Datagrid, TextField, EmailField } from "react-admin"
 
-export const UserList = (props: any) => (
+export const UserList: SFC<object> = (props: any) => (
   <List {...props}>
     <Datagrid rowClick="edit">
       <TextField source="id" />
