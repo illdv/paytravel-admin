@@ -29,6 +29,6 @@
     "coverage",
     "config",
     "jest.config.js",
-    "build.js"
+    "build.ts"
   ]
 }

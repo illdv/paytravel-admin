@@ -1,12 +1,11 @@
 import createMuiTheme, {
-  ThemeOptions
+  ThemeOptions,
 } from "@material-ui/core/styles/createMuiTheme"
-import "typeface-poppins"
 
 function createMyTheme(options: ThemeOptions) {
   return createMuiTheme({
     typography: {
-      fontFamily: ["Poppins", "sans-serif"].join(","),
+      // fontFamily: ["Poppins", "sans-serif"].join(","),
       fontSize: 14,
     },
     // #4F5467
