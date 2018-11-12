@@ -6,7 +6,6 @@ import { createBrowserHistory } from "history"
 import CssBaseline from "@material-ui/core/CssBaseline"
 
 import authProvider from "providers/authProvider"
-
 const dataProvider = jsonServerProvider("http://jsonplaceholder.typicode.com")
 const history = createBrowserHistory()
 
