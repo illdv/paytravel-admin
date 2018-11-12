@@ -22,6 +22,7 @@ import {
   ClientList,
 } from "components/сlients"
 import { dataMock } from "providers/dataProvider"
+import { Dashboard } from "components/DashBoard"
 import { TourCreate, TourEdit, TourList, TourShow } from "components/tours"
 
 // const dataProvider = jsonServerProvider("http://jsonplaceholder.typicode.com")
@@ -43,6 +44,7 @@ const App: FunctionComponent<object> = () => (
       authProvider={authProvider}
       dataProvider={dataProvider}
       history={history}
+      dashboard={Dashboard}
     >
       <Resource
         name="clients"

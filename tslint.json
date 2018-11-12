@@ -23,6 +23,7 @@
     "no-plusplus": [2, { "allowForLoopAfterthoughts": true }],
     "function-name": false,
     "jsx-wrap-multiline": false,
-    "trailing-comma": false
+    "trailing-comma": false,
+    "prefer-array-literal": [true, { "allow-type-parameters": true }]
   }
 }
