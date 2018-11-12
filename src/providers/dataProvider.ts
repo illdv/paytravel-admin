@@ -19,7 +19,7 @@ type Invoice = {
   cost: number
   profit: number
   timeLife: number
-  clients: number[]
+  companions: number[]
 }
 type DataMock = {
   clients: Client[]
@@ -75,22 +75,22 @@ export const dataMock: DataMock = {
     {
       hotel: "hotel1",
       hotelUrl: "https://url1",
-      flyOut: "date1",
-      flyIn: "date1",
+      flyOut: `${new Date()}`,
+      flyIn: `${new Date()}`,
       cost: 10000,
       profit: 2500,
       timeLife: 2,
-      clients: [2],
+      companions: [2],
     },
     {
       hotel: "hotel2",
       hotelUrl: "https://url2",
-      flyOut: "date2",
-      flyIn: "date2",
+      flyOut: `${new Date()}`,
+      flyIn: `${new Date()}`,
       cost: 15000,
       profit: 1200,
       timeLife: 5,
-      clients: [1, 2],
+      companions: [1, 2],
     },
   ],
 }
