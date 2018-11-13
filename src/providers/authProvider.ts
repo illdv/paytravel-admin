@@ -1,3 +1,4 @@
+import axios from "axios"
 import {
   AUTH_LOGIN,
   AUTH_CHECK,
@@ -9,13 +10,30 @@ import {
 const authProvider = (type: string, params: any) => {
   let result: boolean = true
   let payload: object = {}
+  const options = {
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+  }
   switch (type) {
     case AUTH_LOGIN:
-      const { username, password } = params
-      if (username === "admin" && password === "admin") {
-        localStorage.setItem("token", "blablabla")
-      } else result = false
-      break
+      return axios
+        .post(
+          "https://dev.paytravel-api.cronix.ms/api/admin/v1/login",
+          {
+            email: params.username,
+            password: params.password,
+          },
+          options
+        )
+        .then((res: any) => {
+          localStorage.setItem("token", res.data.token)
+        })
+        .catch((err: any) => {
+          result: false
+          console.log("error", err)
+        })
     case AUTH_CHECK:
       result = Boolean(localStorage.getItem("token"))
       break
