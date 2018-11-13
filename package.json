@@ -19,6 +19,7 @@
     "history": "^4.7.2",
     "immer": "^1.7.4",
     "ra-data-json-server": "^2.4.1",
+    "ra-language-russian": "^2.0.3",
     "raven-js": "^3.27.0",
     "react": "^16.7.0-alpha.0",
     "react-admin": "^2.4.1",
