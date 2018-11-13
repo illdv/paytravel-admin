@@ -10,7 +10,7 @@ import {
 } from "react-admin"
 
 export const InvoiceCreate = (props: any) => (
-  <Create {...props}>
+  <Create {...props} title="Создание счета">
     <SimpleForm>
       <TextInput source="hotel" label="отель" />
       <TextInput source="hotelUrl" label="ссылка на отель" />
@@ -19,9 +19,9 @@ export const InvoiceCreate = (props: any) => (
       <NumberInput source="cost" label="цена" />
       <NumberInput source="profit" label="профит" />
       <NumberInput source="timeLife" label="срок жизни счета" />
-      <ArrayInput source="backlinks">
+      <ArrayInput source="companions">
         <SimpleFormIterator>
-          <TextInput source="url" />
+          <TextInput source="name" />
         </SimpleFormIterator>
       </ArrayInput>
     </SimpleForm>

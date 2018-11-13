@@ -1,8 +1,8 @@
 ### Start project
 
-npm i
+yarn
 cp .env.example .env
-npm run start
+yarn start
 
 # Users
 
