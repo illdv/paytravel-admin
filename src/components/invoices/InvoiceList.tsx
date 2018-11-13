@@ -9,17 +9,21 @@ import {
   EditButton,
   DeleteButton,
   ShowButton,
+  ChipField,
+  SingleFieldList,
+  ReferenceArrayField,
 } from "react-admin"
 
-const CompanionsField = ({ record }: any) => {
-  return (
-    <ul style={{ paddingLeft: 0, listStyle: "none" }}>
-      {record.companions.map((item: any) => (
-        <li key={item.id}>{item.name}</li>
-      ))}
-    </ul>
-  )
-}
+// const CompanionsField = (companions: any) => {
+//   console.log(companions)
+//   return (
+//     <ul style={{ paddingLeft: 0, listStyle: "none" }}>
+//       {companions.map((companion: any) => (
+//         <li key={companion.id}>{companion.name}</li>
+//       ))}
+//     </ul>
+//   )
+// }
 
 export const InvoiceList: FunctionComponent<object> = (props: any) => (
   <List {...props} title="Список cчетов">
@@ -31,7 +35,11 @@ export const InvoiceList: FunctionComponent<object> = (props: any) => (
       <NumberField source="cost" />
       <NumberField source="profit" />
       <NumberField source="timeLife" />
-      <CompanionsField />
+      <ReferenceArrayField reference="clients" source="companions">
+        <SingleFieldList>
+          <ChipField source="name" />
+        </SingleFieldList>
+      </ReferenceArrayField>
       <EditButton />
       <DeleteButton />
       <ShowButton />

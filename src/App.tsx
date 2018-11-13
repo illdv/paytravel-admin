@@ -3,7 +3,7 @@ import { Admin, Resource } from "react-admin"
 // import jsonServerProvider from "ra-data-json-server"
 import { createBrowserHistory } from "history"
 import CssBaseline from "@material-ui/core/CssBaseline"
-import { People } from "@material-ui/icons"
+import { People, Receipt } from "@material-ui/icons"
 import fakeDataProvider from "ra-data-fakerest"
 import rusMessages from "ra-language-russian"
 
@@ -46,9 +46,9 @@ const App: FunctionComponent<object> = () => (
       <Resource
         name="clients"
         list={ClientList}
-        show={ClientShow}
         edit={ClientEdit}
         create={ClientCreate}
+        show={ClientShow}
         icon={People}
         options={{ label: "Клиенты" }}
       />
@@ -58,6 +58,7 @@ const App: FunctionComponent<object> = () => (
         edit={InvoiceEdit}
         create={InvoiceCreate}
         show={InvoiceShow}
+        icon={Receipt}
         options={{ label: "Счета" }}
       />
     </Admin>

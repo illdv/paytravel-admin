@@ -4,7 +4,7 @@
   "homepage": "",
   "private": true,
   "scripts": {
-    "start": "node scripts/start.js",
+    "start": "kill $(lsof -t -i:3000); node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom --watchAll && exit 0",
     "test:cover": "node scripts/test.js --env=jsdom --watchAll --coverage && exit 0",

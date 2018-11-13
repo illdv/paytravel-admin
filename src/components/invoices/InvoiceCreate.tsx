@@ -2,22 +2,28 @@ import React from "react"
 import {
   Create,
   SimpleForm,
-  TextField,
-  UrlField,
-  DateField,
-  NumberField,
+  TextInput,
+  NumberInput,
+  DateInput,
+  ArrayInput,
+  SimpleFormIterator,
 } from "react-admin"
 
 export const InvoiceCreate = (props: any) => (
   <Create {...props}>
     <SimpleForm>
-      <TextField source="hotel" label="отель" />
-      <UrlField source="hotelUrl" label="ссылка на отель" />
-      <DateField source="flyOut" label="вылет" />
-      <DateField source="flyIn" label="прилет" />
-      <NumberField source="cost" label="цена" />
-      <NumberField source="profit" label="профит" />
-      <NumberField source="timeLife" label="срок жизни счета" />
+      <TextInput source="hotel" label="отель" />
+      <TextInput source="hotelUrl" label="ссылка на отель" />
+      <DateInput source="flyOut" label="вылет" />
+      <DateInput source="flyIn" label="прилет" />
+      <NumberInput source="cost" label="цена" />
+      <NumberInput source="profit" label="профит" />
+      <NumberInput source="timeLife" label="срок жизни счета" />
+      <ArrayInput source="backlinks">
+        <SimpleFormIterator>
+          <TextInput source="url" />
+        </SimpleFormIterator>
+      </ArrayInput>
     </SimpleForm>
   </Create>
 )
