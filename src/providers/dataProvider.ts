@@ -19,79 +19,79 @@ type Invoice = {
   cost: number
   profit: number
   timeLife: number
-  companions: number[]
+  companions: Client[]
 }
 type DataMock = {
   clients: Client[]
   invoices: Invoice[]
 }
 
+const Client1 = {
+  id: 1,
+  photo: "https://url",
+  name: "name1",
+  lastname: "lastname1",
+  patronymic: "отчество",
+  address: "address1",
+  birthday: "01.01.1990",
+  contacts: {
+    phone: "+7-945-123-33-22",
+    skype: "skype1",
+    vk: "https://vk.com/user1",
+    fb: "https://facebook.com/user1",
+    ok: "https://ok.ru/user1",
+  },
+  documents: {
+    pasport: "https://url1",
+    zagran: "https://url1",
+    visa: "https://url1",
+  },
+}
+
+const Client2 = {
+  id: 2,
+  photo: "https://url",
+  name: "name2",
+  lastname: "lastname2",
+  patronymic: "отчество2",
+  address: "address2",
+  birthday: "02.01.1990",
+  contacts: {
+    phone: "+7-945-123-33-22",
+    skype: "skype2",
+    vk: "https://vk.com/user2",
+    fb: "https://facebook.com/user2",
+    ok: "https://ok.ru/user2",
+  },
+  documents: {
+    pasport: "https://url2",
+    zagran: "https://url2",
+    visa: "https://url2",
+  },
+}
+
 export const dataMock: DataMock = {
-  clients: [
-    {
-      id: 1,
-      photo:
-        "https://www.crn.ru/upload/iblock/b5d/18763190_1726608900689161_555391518_n.jpg",
-      name: "Иван",
-      lastname: "Иванов",
-      patronymic: "Иванович",
-      address: "address1",
-      birthday: `${new Date(1990, 0, 1)}`,
-      contacts: {
-        phone: "+7-945-123-33-22",
-        skype: "skype1",
-        vk: "https://vk.com/user1",
-        fb: "https://facebook.com/user1",
-        ok: "https://ok.ru/user1",
-      },
-      documents: {
-        pasport: "https://url1",
-        zagran: "https://url1",
-        visa: "https://url1",
-      },
-    },
-    {
-      id: 2,
-      photo: "http://biozvezd.ru/images/71/71573/svetlana-zejnalova.jpg",
-      name: "Галина",
-      lastname: "Петрова",
-      patronymic: "Петровна",
-      address: "address2",
-      birthday: `${new Date(1990, 0, 2)}`,
-      contacts: {
-        phone: "+7-945-123-33-22",
-        skype: "skype2",
-        vk: "https://vk.com/user2",
-        fb: "https://facebook.com/user2",
-        ok: "https://ok.ru/user2",
-      },
-      documents: {
-        pasport: "https://url2",
-        zagran: "https://url2",
-        visa: "https://url2",
-      },
-    },
-  ],
+  clients: [Client1, Client2],
   invoices: [
     {
       hotel: "hotel1",
       hotelUrl: "https://url1",
       flyOut: `${new Date()}`,
-      flyIn: `${new Date()}`,
+      flyIn: `${+new Date() + 10000}`,
       cost: 10000,
       profit: 2500,
       timeLife: 2,
-      companions: [2],
+      companions: [Client2],
     },
     {
       hotel: "hotel2",
       hotelUrl: "https://url2",
-      flyOut: `${new Date()}`,
-      flyIn: `${new Date()}`,
+      flyOut: `${+new Date()}`,
+      flyIn: `${+new Date() + 10000}`,
       cost: 15000,
       profit: 1200,
       timeLife: 5,
-      companions: [1, 2],
+      companions: [Client1, Client2],
     },
   ],
 }

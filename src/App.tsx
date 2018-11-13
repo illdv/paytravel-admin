@@ -15,12 +15,18 @@ import {
   InvoiceEdit,
   InvoiceShow,
 } from "components/invoices"
-import { ClientShow, ClientEdit, ClientCreate, ClientList } from "components/Clients"
+import {
+  ClientShow,
+  ClientEdit,
+  ClientCreate,
+  ClientList,
+} from "components/сlients"
 import { dataMock } from "providers/dataProvider"
 
 // const dataProvider = jsonServerProvider("http://jsonplaceholder.typicode.com")
 const history = createBrowserHistory()
 const dataProvider = fakeDataProvider(dataMock)
+
 const messages = {
   ru: rusMessages,
 }
@@ -30,6 +36,7 @@ const App: FunctionComponent<object> = () => (
   <>
     <CssBaseline />
     <Admin
+      title="Pay-travel admin"
       locale="ru"
       i18nProvider={i18nProvider}
       authProvider={authProvider}

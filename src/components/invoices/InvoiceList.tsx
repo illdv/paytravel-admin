@@ -6,19 +6,24 @@ import {
   UrlField,
   NumberField,
   DateField,
+  EditButton,
+  DeleteButton,
+  ShowButton,
 } from "react-admin"
 
-const TagsField = ({ record }: any) => (
-  <ul style={{ paddingLeft: 0, listStyle: "none" }}>
-    {record.companions.map((item: any) => (
-      <li key={item}>{item}</li>
-    ))}
-  </ul>
-)
+const CompanionsField = ({ record }: any) => {
+  return (
+    <ul style={{ paddingLeft: 0, listStyle: "none" }}>
+      {record.companions.map((item: any) => (
+        <li key={item.id}>{item.name}</li>
+      ))}
+    </ul>
+  )
+}
 
 export const InvoiceList: FunctionComponent<object> = (props: any) => (
-  <List {...props}>
-    <Datagrid rowClick="show">
+  <List {...props} title="Список cчетов">
+    <Datagrid>
       <TextField source="hotel" />
       <UrlField source="hotelUrl" />
       <DateField source="flyOut" />
@@ -26,7 +31,10 @@ export const InvoiceList: FunctionComponent<object> = (props: any) => (
       <NumberField source="cost" />
       <NumberField source="profit" />
       <NumberField source="timeLife" />
-      <TagsField source="companions" />
+      <CompanionsField />
+      <EditButton />
+      <DeleteButton />
+      <ShowButton />
     </Datagrid>
   </List>
 )

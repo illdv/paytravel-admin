@@ -1,4 +1,4 @@
-import React from "react"
+import React, { FunctionComponent } from "react"
 import {
   Edit,
   SimpleForm,
@@ -6,9 +6,10 @@ import {
   NumberInput,
   DateInput,
 } from "react-admin"
+import { InvoiceTitle } from "./InvoiceTitle"
 
-export const InvoiceEdit = (props: any) => (
-  <Edit {...props}>
+export const InvoiceEdit: FunctionComponent = (props: any) => (
+  <Edit {...props} title={<InvoiceTitle />}>
     <SimpleForm>
       <TextInput source="hotel" />
       <TextInput source="hotelUrl" />
