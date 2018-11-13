@@ -13,7 +13,7 @@ export const ClientCreate = (props: any) => (
       <TextInput source="name" label="имя" />
       <TextInput source="lastname" label="фамилия" />
       <ImageInput source="photo" label="фото" />
-      <DateInput source="birthday" label="дата рождения" />
+      <DateInput source="birthday" label="дата рождения" locales="ru-RU" />
       <TextInput source="address" label="адрес" />
       <TextInput source="contacts.phone" label="телефон" />
       <TextInput source="contacts.skype" label="Skype" />

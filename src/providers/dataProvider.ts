@@ -30,12 +30,13 @@ export const dataMock: DataMock = {
   clients: [
     {
       id: 1,
-      photo: "https://url",
-      name: "name1",
-      lastname: "lastname1",
-      patronymic: "отчество",
+      photo:
+        "https://www.crn.ru/upload/iblock/b5d/18763190_1726608900689161_555391518_n.jpg",
+      name: "Иван",
+      lastname: "Иванов",
+      patronymic: "Иванович",
       address: "address1",
-      birthday: "01.01.1990",
+      birthday: `${new Date(1990, 0, 1)}`,
       contacts: {
         phone: "+7-945-123-33-22",
         skype: "skype1",
@@ -51,12 +52,12 @@ export const dataMock: DataMock = {
     },
     {
       id: 2,
-      photo: "https://url",
-      name: "name2",
-      lastname: "lastname2",
-      patronymic: "отчество2",
+      photo: "http://biozvezd.ru/images/71/71573/svetlana-zejnalova.jpg",
+      name: "Галина",
+      lastname: "Петрова",
+      patronymic: "Петровна",
       address: "address2",
-      birthday: "02.01.1990",
+      birthday: `${new Date(1990, 0, 2)}`,
       contacts: {
         phone: "+7-945-123-33-22",
         skype: "skype2",

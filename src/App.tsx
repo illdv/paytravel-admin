@@ -4,6 +4,7 @@ import { Admin, Resource } from "react-admin"
 import { ClientList } from "components/Clients/ClientList"
 import { createBrowserHistory } from "history"
 import CssBaseline from "@material-ui/core/CssBaseline"
+import { People } from "@material-ui/icons"
 import fakeDataProvider from "ra-data-fakerest"
 import rusMessages from "ra-language-russian"
 
@@ -36,6 +37,7 @@ const App: FunctionComponent<object> = () => (
         show={ClientShow}
         edit={ClientEdit}
         create={ClientCreate}
+        icon={People}
         options={{ label: "Клиенты" }}
       />
     </Admin>
