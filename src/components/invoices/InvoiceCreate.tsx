@@ -7,6 +7,7 @@ import {
   DateInput,
   ReferenceArrayInput,
   SelectArrayInput,
+  CreateButton,
 } from "react-admin"
 
 export const InvoiceCreate = (props: any) => (
@@ -26,6 +27,7 @@ export const InvoiceCreate = (props: any) => (
       >
         <SelectArrayInput optionText="name" />
       </ReferenceArrayInput>
+      <CreateButton />
     </SimpleForm>
   </Create>
 )

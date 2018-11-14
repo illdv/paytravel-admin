@@ -32,7 +32,7 @@ import {
 
 export const TourList: FunctionComponent<object> = (props: any) => (
   <List {...props} title="Список туров">
-    <Datagrid rowClick="false">
+    <Datagrid>
       <TextField source="hotel" label="Отель" />
       <UrlField source="hotelLink" label="Ссылка" />
       <DateField source="dateStart" label="Дата начала" locales="ru-RU" />

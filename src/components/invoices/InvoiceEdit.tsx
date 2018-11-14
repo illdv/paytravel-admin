@@ -5,6 +5,8 @@ import {
   TextInput,
   NumberInput,
   DateInput,
+  ReferenceArrayInput,
+  SelectArrayInput,
 } from "react-admin"
 import { InvoiceTitle } from "./InvoiceTitle"
 
@@ -18,6 +20,13 @@ export const InvoiceEdit: FunctionComponent = (props: any) => (
       <NumberInput source="cost" />
       <NumberInput source="profit" />
       <NumberInput source="timeLife" />
+      <ReferenceArrayInput
+        source="companions"
+        reference="clients"
+        label="компаньоны"
+      >
+        <SelectArrayInput optionText="name" />
+      </ReferenceArrayInput>
     </SimpleForm>
   </Edit>
 )

@@ -6,6 +6,9 @@ import {
   UrlField,
   DateField,
   NumberField,
+  SingleFieldList,
+  ReferenceArrayField,
+  ChipField,
 } from "react-admin"
 import { InvoiceTitle } from "./InvoiceTitle"
 
@@ -20,6 +23,11 @@ export const InvoiceShow: FunctionComponent = (props: any) => {
         <NumberField source="cost" label="цена" />
         <NumberField source="profit" label="профит" />
         <NumberField source="timeLife" label="срок жизни счета" />
+        <ReferenceArrayField source="companions" reference="clients">
+          <SingleFieldList>
+            <ChipField source="name" />
+          </SingleFieldList>
+        </ReferenceArrayField>
       </SimpleShowLayout>
     </Show>
   )

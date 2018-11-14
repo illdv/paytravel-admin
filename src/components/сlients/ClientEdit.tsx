@@ -11,7 +11,7 @@ import {
 
 const ClientEditTitle = ({ record }: any) => (
   <span>
-    редактирование: {record.lastname} {record.name} {record.patronymic}
+    Редактирование: {record.lastname} {record.name} {record.patronymic}
   </span>
 )
 
