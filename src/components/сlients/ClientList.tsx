@@ -30,7 +30,6 @@ const ContactsField = ({ record }: any) => {
 export const ClientList: FunctionComponent<object> = (props: any) => (
   <List {...props} title="Список клиентов">
     <Datagrid rowClick="false">
-      <TextField source="id" label="ID" />
       <TextField source="lastname" label="Фамилия" />
       <TextField source="name" label="Имя" />
       <TextField source="patronymic" label="Отчество" />

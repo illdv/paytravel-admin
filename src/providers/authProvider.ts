@@ -21,7 +21,6 @@ const authProvider = (type: string, params: any) => {
       return axios
         .post(
           "https://dev.paytravel-api.cronix.ms/api/admin/v1/login",
-          // tslint:disable-next-line
           {
             email: params.username,
             password: params.password,
@@ -32,7 +31,6 @@ const authProvider = (type: string, params: any) => {
           localStorage.setItem("token", res.data.token)
         })
         .catch((err: any) => {
-          result: false
           console.log("error", err)
         })
     case AUTH_CHECK:

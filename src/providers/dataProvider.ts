@@ -21,57 +21,69 @@ type Invoice = {
   timeLife: number
   companions: number[]
 }
+type Tour = {
+  id: number
+  hotel: string
+  hotelLink: string
+  dateStart: string
+  dateEnd: string
+  cost: number
+  type: string
+  photos: string[]
+  priority: number // 1-10
+}
 type DataMock = {
   clients: Client[]
   invoices: Invoice[]
-}
-
-const Client1 = {
-  id: 1,
-  photo: "https://url",
-  name: "name1",
-  lastname: "lastname1",
-  patronymic: "отчество",
-  address: "address1",
-  birthday: "01.01.1990",
-  contacts: {
-    phone: "+7-945-123-33-22",
-    skype: "skype1",
-    vk: "https://vk.com/user1",
-    fb: "https://facebook.com/user1",
-    ok: "https://ok.ru/user1",
-  },
-  documents: {
-    pasport: "https://url1",
-    zagran: "https://url1",
-    visa: "https://url1",
-  },
-}
-
-const Client2 = {
-  id: 2,
-  photo: "https://url",
-  name: "name2",
-  lastname: "lastname2",
-  patronymic: "отчество2",
-  address: "address2",
-  birthday: "02.01.1990",
-  contacts: {
-    phone: "+7-945-123-33-22",
-    skype: "skype2",
-    vk: "https://vk.com/user2",
-    fb: "https://facebook.com/user2",
-    ok: "https://ok.ru/user2",
-  },
-  documents: {
-    pasport: "https://url2",
-    zagran: "https://url2",
-    visa: "https://url2",
-  },
+  tours: Tour[]
 }
 
 export const dataMock: DataMock = {
-  clients: [Client1, Client2],
+  clients: [
+    {
+      id: 1,
+      photo:
+        "https://radiovera.ru/wp-content/uploads/2018/03/Andrey-Tarasov_.jpg",
+      name: "Иван",
+      lastname: "Поляков",
+      patronymic: "Сергеевич",
+      address: "address1",
+      birthday: `${new Date(1990, 1, 14)}`,
+      contacts: {
+        phone: "+7-945-123-33-22",
+        skype: "skype1",
+        vk: "https://vk.com/user1",
+        fb: "https://facebook.com/user1",
+        ok: "https://ok.ru/user1",
+      },
+      documents: {
+        pasport: "https://url1",
+        zagran: "https://url1",
+        visa: "https://url1",
+      },
+    },
+    {
+      id: 2,
+      photo: "http://biozvezd.ru/images/71/71573/svetlana-zejnalova.jpg",
+      name: "Галина",
+      lastname: "Сибирякова",
+      patronymic: "Петровна",
+      address: "address2",
+      birthday: `${new Date(1992, 1, 23)}`,
+      contacts: {
+        phone: "+7-945-123-33-22",
+        skype: "skype2",
+        vk: "https://vk.com/user2",
+        fb: "https://facebook.com/user2",
+        ok: "https://ok.ru/user2",
+      },
+      documents: {
+        pasport: "https://url2",
+        zagran: "https://url2",
+        visa: "https://url2",
+      },
+    },
+  ],
   invoices: [
     {
       hotel: "hotel1",
@@ -92,6 +104,36 @@ export const dataMock: DataMock = {
       profit: 1200,
       timeLife: 5,
       companions: [1, 2],
+    },
+  ],
+  tours: [
+    {
+      id: 1,
+      hotel: "Березка",
+      hotelLink: "https://tophotel.ru/berezka",
+      dateStart: `${new Date(2018, 11, 30)}`,
+      dateEnd: `${new Date(2018, 12, 11)}`,
+      cost: 18000,
+      type: "Акция",
+      photos: [
+        "https://t-ec.bstatic.com/images/hotel/max1024x768/757/75788232.jpg",
+        "https://s-ec.bstatic.com/images/hotel/max1024x768/154/154565624.jpg",
+        "https://s-ec.bstatic.com/images/hotel/max1024x768/148/148981834.jpg",
+      ],
+      priority: 3,
+    },
+    {
+      id: 2,
+      hotel: "Бусинка",
+      hotelLink: "https://tophotel.ru/businka",
+      dateStart: `${new Date(2018, 12, 15)}`,
+      dateEnd: `${new Date(2018, 12, 31)}`,
+      cost: 12000,
+      type: "Горящий тур",
+      photos: [
+        "http://www.funisrael.ru/wp-content/uploads/2013/03/rimonim-eilat-hotel.jpg",
+      ],
+      priority: 5,
     },
   ],
 }

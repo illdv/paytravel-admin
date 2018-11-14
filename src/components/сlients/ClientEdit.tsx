@@ -9,21 +9,22 @@ import {
   ImageField,
 } from "react-admin"
 
+const ClientEditTitle = ({ record }: any) => (
+  <span>
+    редактирование: {record.lastname} {record.name} {record.patronymic}
+  </span>
+)
+
 export const ClientEdit = (props: any) => (
-  <Edit {...props}>
+  <Edit {...props} title={<ClientEditTitle />}>
     <TabbedForm>
       <FormTab label="Основные">
-        <ImageInput
-          source="photo"
-          title="Фото"
-          label="Related pictures"
-          accept="image/*"
-        >
+        <ImageInput source="photo" title="Фото" label="Фото" accept="image/*">
           <ImageField source="src" />
         </ImageInput>
-        <TextInput source="lastname" />
-        <TextInput source="name" />
-        <TextInput source="patronymic" />
+        <TextInput source="lastname" label="Фамилия" />
+        <TextInput source="name" label="Имя" />
+        <TextInput source="patronymic" label="Отчество" />
         <DateInput source="birthday" label="Дата рождения" />
       </FormTab>
       <FormTab label="Контакты">
@@ -35,9 +36,9 @@ export const ClientEdit = (props: any) => (
         <TextInput source="contacts.skype" label="Skype" />
       </FormTab>
       <FormTab label="Документы">
-        <TextInput source="documents.pasport" label="" />
-        <TextInput source="documents.zagran" label="" />
-        <TextInput source="documents.visa" label="" />
+        <TextInput source="documents.pasport" label="Скан. паспорта" />
+        <TextInput source="documents.zagran" label="Скан. загран. паспорта" />
+        <TextInput source="documents.visa" label="Скан. визы" />
       </FormTab>
     </TabbedForm>
   </Edit>

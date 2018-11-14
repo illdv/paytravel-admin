@@ -9,6 +9,7 @@
     ]
   },
   "rules": {
+    "ter-indent": [false, 2],
     "quotemark": "double",
     "semicolon": [true, "never"],
     "no-unexpected-multiline": true,

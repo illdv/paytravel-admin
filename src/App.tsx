@@ -3,7 +3,7 @@ import { Admin, Resource } from "react-admin"
 // import jsonServerProvider from "ra-data-json-server"
 import { createBrowserHistory } from "history"
 import CssBaseline from "@material-ui/core/CssBaseline"
-import { People, Receipt } from "@material-ui/icons"
+import { People, Receipt, Flight } from "@material-ui/icons"
 import fakeDataProvider from "ra-data-fakerest"
 import rusMessages from "ra-language-russian"
 
@@ -22,6 +22,7 @@ import {
   ClientList,
 } from "components/сlients"
 import { dataMock } from "providers/dataProvider"
+import { TourCreate, TourEdit, TourList, TourShow } from "components/tours"
 
 // const dataProvider = jsonServerProvider("http://jsonplaceholder.typicode.com")
 const history = createBrowserHistory()
@@ -51,6 +52,15 @@ const App: FunctionComponent<object> = () => (
         show={ClientShow}
         icon={People}
         options={{ label: "Клиенты" }}
+      />
+      <Resource
+        name="tours"
+        list={TourList}
+        edit={TourEdit}
+        create={TourCreate}
+        show={TourShow}
+        icon={Flight}
+        options={{ label: "Туры" }}
       />
       <Resource
         name="invoices"

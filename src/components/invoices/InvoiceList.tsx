@@ -36,7 +36,7 @@ export const InvoiceList: FunctionComponent<object> = (props: any) => (
       <NumberField source="profit" />
       <NumberField source="timeLife" />
       <ReferenceArrayField reference="clients" source="companions">
-        <SingleFieldList>
+        <SingleFieldList linkType="show">
           <ChipField source="name" />
         </SingleFieldList>
       </ReferenceArrayField>
