@@ -14,20 +14,10 @@ import {
   ReferenceArrayField,
 } from "react-admin"
 
-// const CompanionsField = (companions: any) => {
-//   console.log(companions)
-//   return (
-//     <ul style={{ paddingLeft: 0, listStyle: "none" }}>
-//       {companions.map((companion: any) => (
-//         <li key={companion.id}>{companion.name}</li>
-//       ))}
-//     </ul>
-//   )
-// }
-
 export const InvoiceList: FunctionComponent<object> = (props: any) => (
   <List {...props} title="Список cчетов">
     <Datagrid>
+      <TextField source="id" />
       <TextField source="hotel" />
       <UrlField source="hotelUrl" />
       <DateField source="flyOut" />

@@ -12,6 +12,7 @@ type Client = {
   documents: object
 }
 type Invoice = {
+  id: number
   hotel: string
   hotelUrl: string
   flyOut: string
@@ -86,6 +87,7 @@ export const dataMock: DataMock = {
   ],
   invoices: [
     {
+      id: 1,
       hotel: "hotel1",
       hotelUrl: "https://url1",
       flyOut: `${new Date()}`,
@@ -96,6 +98,7 @@ export const dataMock: DataMock = {
       companions: [2],
     },
     {
+      id: 2,
       hotel: "hotel2",
       hotelUrl: "https://url2",
       flyOut: `${new Date()}`,

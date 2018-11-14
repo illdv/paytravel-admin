@@ -21,10 +21,12 @@ const authProvider = (type: string, params: any) => {
       return axios
         .post(
           "https://dev.paytravel-api.cronix.ms/api/admin/v1/login",
+          // tslint:disable
           {
             email: params.username,
             password: params.password,
           },
+          // tslint:enable
           options
         )
         .then((res: any) => {

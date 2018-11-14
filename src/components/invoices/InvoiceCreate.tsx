@@ -5,8 +5,8 @@ import {
   TextInput,
   NumberInput,
   DateInput,
-  ArrayInput,
-  SimpleFormIterator,
+  ReferenceArrayInput,
+  SelectArrayInput,
 } from "react-admin"
 
 export const InvoiceCreate = (props: any) => (
@@ -19,11 +19,13 @@ export const InvoiceCreate = (props: any) => (
       <NumberInput source="cost" label="цена" />
       <NumberInput source="profit" label="профит" />
       <NumberInput source="timeLife" label="срок жизни счета" />
-      <ArrayInput source="companions">
-        <SimpleFormIterator>
-          <TextInput source="name" />
-        </SimpleFormIterator>
-      </ArrayInput>
+      <ReferenceArrayInput
+        source="companions"
+        reference="clients"
+        label="companions"
+      >
+        <SelectArrayInput optionText="name" />
+      </ReferenceArrayInput>
     </SimpleForm>
   </Create>
 )
