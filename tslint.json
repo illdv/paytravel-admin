@@ -9,6 +9,7 @@
     ]
   },
   "rules": {
+    "ter-indent": [false, 2],
     "quotemark": "double",
     "semicolon": [true, "never"],
     "no-unexpected-multiline": true,
@@ -22,6 +23,7 @@
     "no-plusplus": [2, { "allowForLoopAfterthoughts": true }],
     "function-name": false,
     "jsx-wrap-multiline": false,
-    "trailing-comma": false
+    "trailing-comma": false,
+    "prefer-array-literal": [true, { "allow-type-parameters": true }]
   }
 }

@@ -1,11 +1,10 @@
 ### Start project
 
-npm i
+yarn
 cp .env.example .env
-npm run start
+yarn start
 
-# Users 
-
+# Users
 
 # Semantic Commit Messages
 
@@ -31,3 +30,9 @@ feat: add hat wobble
 - `refactor`: (refactoring production code, eg. renaming a variable)
 - `test`: (adding missing tests, refactoring tests; no production code change)
 - `chore`: (updating grunt tasks etc; no production code change)
+
+## Test users
+
+`Admin:` fidu@xcodes.net / 111111
+
+`Manager:` user@rsvhr.com / 111111

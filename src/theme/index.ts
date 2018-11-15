@@ -15,8 +15,8 @@ function createMyTheme(options: ThemeOptions) {
       background: { default: "#EDF1F5" },
       text: { primary: "#4d4d4d", secondary: "#a7a9b3" },
       action: {
-        // selected: 'rgb(251, 171, 147)',
-        // hover: 'rgb(251, 171, 147)',
+        // selected: "rgb(251, 171, 147)",
+        // hover: "rgb(251, 171, 147)",
         active: "#000",
       },
     },
